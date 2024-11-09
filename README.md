@@ -61,6 +61,15 @@
 
    # รัน Docker container
    docker run --env-file .env discord-bot
+
+   # ดู logs ของ container
+   docker logs <container_id>
+
+   # หยุดการทำงานของ container
+   docker stop <container_id>
+
+   # ลบ container
+   docker rm <container_id>
    ```
 
 7. **การใช้งานด้วย setup.bat (สำหรับ Windows)**:
@@ -84,35 +93,3 @@
 - `/ping` - ทดสอบการเชื่อมต่อของบอท
 
 
-discord/
-│
-├── discord/            # โฟลเดอร์หลักของโปรเจค
-│   ├── __init__.py     # ทำให้โฟลเดอร์นี้เป็น package
-│   ├── bot.py          # ไฟล์หลักสำหรับบอท Discord
-│   ├── commands/       # โฟลเดอร์สำหรับเก็บคำสั่งต่างๆ
-│   │   ├── __init__.py
-│   │   ├── command1.py
-│   │   └── command2.py
-│   ├── events/         # โฟลเดอร์สำหรับเก็บ event handlers
-│   │   ├── __init__.py
-│   │   ├── on_ready.py
-│   │   └── on_message.py
-│   └── utils/          # โฟลเดอร์สำหรับเก็บ utilities หรือ helper functions
-│       ├── __init__.py
-│       └── helpers.py
-│
-├── tests/              # โฟลเดอร์สำหรับเก็บ unit tests
-│   ├── __init__.py
-│   ├── test_bot.py
-│   └── ...
-│
-├── docs/               # เอกสารประกอบโปรเจค
-│   └── ...
-│
-├── scripts/            # สคริปต์ที่ใช้ในการจัดการโปรเจค
-│   └── ...
-│
-├── requirements.txt    # รายการ dependencies ของโปรเจค
-├── setup.py            # สคริปต์สำหรับการติดตั้งโปรเจค
-├── README.md           # คำอธิบายโปรเจค
-└── .gitignore          # ไฟล์ที่ไม่ต้องการให้ git ติดตาม 
